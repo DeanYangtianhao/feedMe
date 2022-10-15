@@ -1,0 +1,149 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - confirm
+    - ok
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+- intent: restaurant_search
+  examples: |
+    - restaurant
+    - breakfast
+    - lunch
+    - dinner
+    - order
+    - Athens restaurant
+    - find me restaurant
+    - show me restaurants
+    - I am looking for a restaurant
+    - I am looking for some restaurants in Athens
+    - food
+    - restaurant_search
+
+- intent: North Athens restaurant
+  examples: |
+    - North Athens restaurant
+    - North Athens
+    - North
+
+- intent: South Athens restaurant
+  examples: |
+    - South Athens restaurant
+    - South Athens
+    - South
+- intent: Plan A
+  examples: |
+    - Plan A
+    - A
+
+- intent: Plan B
+  examples: |
+    - Plan B
+    - B
+
+- intent: Plan C
+  examples: |
+    - Plan C
+    - C
+
+- intent: thanks
+  examples: |
+    - thanks
+    - thank you
+    - thank you very much
+    - ok
+    - ok thakns
+    - Thanks
+    - Thank you
+- intent: ask_complaint
+  examples: |
+    - complaint
+    - I have a complaint
+    - I am mad
+    - I am annoyed
+    - I am angry
+
+
+
+- intent: out_of_scope
+  examples: |
+    - i am hungry
+    - ?
+    - what
+    - money
+
+- intent: my_order
+  examples: |
+    - Where is my order?
+    - I want to know about my order
+    - Order information please
+    - Track my order
+    - ask
+    - can i ask the number
+    - can i ask the number, please?
+    - ask order
+    - ask the order
+    - How's my food preparation going?
+    - How is my food preparation?
+
+- intent: order_details
+  examples: |
+    - My order number is [O123](order_number)
+    - Here's my order number [O456](order_number)
+    - [O765](order_number)
+    - Order number is [O332](order_number)
+    - Order number is [O435](order_number)
+    - Here is the order number [O465](order_number)
+    - Here it is [O444](order_number)
+    - Yes, here it is [O475](order_number)
+
+- intent: order_cancel
+  examples: |
+    - cancel
+    - cancel order
+    - can i cancel order
+    - can i cancel my order
+    - can i cancel order?
+    - can i cancel my order?
+    - cancel my order

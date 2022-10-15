@@ -1,0 +1,132 @@
+version: '3.1'
+intents:
+- No
+- North Athens restaurant
+- Plan A
+- Plan B
+- Plan C
+- South Athens restaurant
+- Yes
+- affirm
+- ask_complaint
+- ask_situation
+- bot_challenge
+- deny
+- entertain_me
+- goodbye
+- greet
+- inform_email
+- inform_order_number
+- inform_zip_code
+- mood_great
+- mood_unhappy
+- my_order
+- order_details
+- out_of_scope
+- restaurant_search
+- thanks
+- view
+- order_cancel
+
+entities:
+- order_number
+slots:
+  order_number:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: order_number
+      conditions:
+      - active_loop: order_number_form
+forms:
+  order_number_form:
+    required_slots:
+    - order_number
+actions:
+- ask_order
+- query_order_details
+- utter_order_valid
+- utter_ask_order_number
+- validate_order_number_form
+responses:
+  utter_greet:
+  - text: Hello, I'm your personal gourmet. What would you like to eat today?.
+
+  utter_goodbye:
+  - text: Good bye
+
+  utter_res:
+  - text: "Please choose the restaurant."
+    buttons:
+      - payload: North Athens restaurant
+        title: North Athens restaurant
+      - payload: South Athens restaurant
+        title: South Athens restaurant
+
+  utter_options_menu:
+  - text: "Please choose the menu."
+    buttons:
+      - payload: Plan A
+        title: Plan A
+
+      - payload: Plan B
+        title: Plan B
+
+      - payload: Plan C
+        title: Plan C
+
+  utter_confirm:
+  - text: "Do you confirm this order?"
+
+#  utter_ask_order_1:
+#  - text: "You have successfully ordered a meal. The order number is 0001"
+#
+#  utter_ask_order_2:
+#  - text: "You have successfully ordered a meal. The order number is 0002"
+#
+#  utter_ask_order_3:
+#  - text: "You have successfully ordered a meal. The order number is 0003"
+#
+#  utter_ask_order_4:
+#  - text: "You have successfully ordered a meal. The order number is 0004"
+#  utter_ask_order_5:
+#  - text: "You have successfully ordered a meal. The order number is 0005"
+#  utter_ask_order_6:
+#  - text: "You have successfully ordered a meal. The order number is 0006"
+
+  utter_send_number:
+  - text: "please send your order number(Four digits), like 1234"
+
+  utter_reply_order_right:
+  - text: "Please wait while the food is being prepared. And delivery for you."
+
+  utter_reply_order_error:
+  - text: "Sorry, we can't find the order number."
+
+  utter_complaint:
+  - text: "Sorry, you can contact us by Email:feedme@me.com, or phone number:123321123"
+
+  utter_track_order:
+  - text: "In that case, do me a favour and share your order number"
+
+  utter_ask_order_number:
+  - text: "Would you take the trouble of telling me your order number"
+
+  utter_order_valid:
+  - text: "The order number correct"
+
+  utter_wait:
+  - text: "Wait a minute."
+
+  utter_cancel:
+  - text: "I'm sorry. Would you like to cancel your order?"
+
+  utter_cancel_reply:
+  - text: "Your order has been cancelled."
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

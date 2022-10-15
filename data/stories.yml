@@ -1,0 +1,206 @@
+version: "3.1"
+
+stories:
+
+- story: order_planA_right
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: North Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan A
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_right
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_planB_right
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: North Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan B
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_right
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_planC_right
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: North Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan C
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_right
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_planA_right
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: South Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan A
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_right
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_planB_right
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: South Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan B
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_right
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_planC_right
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: South Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan C
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_right
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_planA_error
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: North Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan A
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: my_order
+  - action: utter_send_number
+  - intent: order_details
+  - action: utter_reply_order_error
+  - intent: ask_complaint
+  - action: utter_complaint
+  - intent: thanks
+  - action: utter_goodbye
+
+- story: order_cancel
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_res
+  - intent: North Athens restaurant
+  - action: utter_options_menu
+  - intent: Plan A
+  - action: utter_confirm
+  - intent: affirm
+  - action: ask_order
+  - intent: order_cancel
+  - action: utter_cancel
+  - intent: affirm
+  - action: utter_cancel_reply
+
+
+#  - action: order_number_form
+#  - active_loop: order_number_form
+#  - slot_was_set:
+#    - requested_slot: order_number
+#  - slot_was_set:
+#    - order_number: order_number
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: utter_order_valid
+#  - action: query_order_details
+#  - intent: my_order
+#- story: North_PlanA
+#  steps:
+#  - intent: greet
+#  - action: utter_greet_user
+#  - intent: restaurant_search
+#  - action: utter_ask_res
+#  - intent: North Athens resturant
+#  - action: utter_ask_menu
+#  - intent: Plan A
+#  - action: utter_ask
+#  - intent: affirm
+#  - action: utter_order
+#  - intent: thank
+#  - action: utter_goodbye
+#
+#
+#- story: Check_order #查询订单
+#  steps:
+#  - intent: greet
+#  - action: utter_greet_user
+#  - intent: view
+#  - action: utter_order
+#  - intent: ask_situation
+#  - action: utter_reply_order
+#  - intent: thank
+#  - action: utter_goodbye
+#
+#- story: complaint #投诉
+#  steps:
+#  - intent: greet
+#  - action: utter_greet_user
+#  - intent: ask_complaint
+#  - action: utter_FallBackPolicy
